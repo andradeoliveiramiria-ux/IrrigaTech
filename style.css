@@ -1,0 +1,334 @@
+/* ====================================== */
+/* RESET */
+/* ====================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====================================== */
+/* DESIGN SYSTEM */
+/* ALTERE AS CORES PRINCIPAIS AQUI */
+/* ====================================== */
+
+:root {
+
+  --primary: #0b8f6a;
+  --secondary: #0d5c63;
+  --background: #f4fdf9;
+  --text: #1d1d1d;
+  --white: #ffffff;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  --radius: 16px;
+
+  --shadow:
+    0 4px 12px rgba(0,0,0,0.1);
+
+  --transition: 0.3s ease;
+}
+
+/* ====================================== */
+/* ALTO CONTRASTE */
+/* ====================================== */
+
+body.high-contrast {
+  background: black;
+  color: yellow;
+}
+
+body.high-contrast .card,
+body.high-contrast .tip-card,
+body.high-contrast .quiz-box,
+body.high-contrast .calculator {
+  background: #111;
+  border: 2px solid yellow;
+}
+
+/* ====================================== */
+/* BODY */
+/* ====================================== */
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  transition: var(--transition);
+}
+
+/* ====================================== */
+/* HEADER */
+/* ====================================== */
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://10wallpaper.com/wallpaper/1366x768/1712/New_Zealand_Hatton_Hills_Secret_Lake_Travel_4K_Ultra_HD_1366x768.jpg');
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  padding: var(--spacing-lg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero-content {
+  margin-top: 5rem;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+}
+
+/* ====================================== */
+/* SEÇÕES */
+/* ====================================== */
+
+.section {
+  padding: 4rem 1.5rem;
+}
+
+.section h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ====================================== */
+/* GRID */
+/* ALTERE O GRID AQUI */
+/* ====================================== */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media(min-width: 768px) {
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* ====================================== */
+/* CARDS */
+/* ====================================== */
+
+.card,
+.tip-card,
+.quiz-box,
+.calculator {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ====================================== */
+/* DICAS */
+/* ====================================== */
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media(min-width: 768px) {
+
+  .tips-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* ====================================== */
+/* CARROSSEL */
+/* ====================================== */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: rgba(0,0,0,0.5);
+  color: white;
+
+  border: none;
+
+  padding: 1rem;
+
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* ====================================== */
+/* ACORDEÃO */
+/* ====================================== */
+
+.accordion {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+
+  background: var(--primary);
+  color: white;
+
+  border: none;
+  cursor: pointer;
+
+  text-align: left;
+
+  border-radius: var(--radius);
+}
+
+.panel {
+  display: none;
+  padding: 1rem;
+  background: white;
+}
+
+/* ====================================== */
+/* QUIZ */
+/* ====================================== */
+
+.quiz-box button {
+  display: block;
+  width: 100%;
+
+  margin-top: 1rem;
+  padding: 1rem;
+
+  border: none;
+
+  background: var(--secondary);
+  color: white;
+
+  border-radius: var(--radius);
+
+  cursor: pointer;
+}
+
+/* ====================================== */
+/* CALCULADORA */
+/* ====================================== */
+
+.calculator {
+  max-width: 500px;
+  margin: auto;
+}
+
+.calculator input {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.calculator button {
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+
+  border: none;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: var(--radius);
+
+  cursor: pointer;
+}
+
+/* ====================================== */
+/* FOOTER */
+/* ====================================== */
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background: var(--secondary);
+  color: white;
+}
+
+/* ====================================== */
+/* SCROLL REVEAL */
+/* ====================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,256 @@
+<DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IrrigaTech- Sustentabilidade no Campo</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ====================================== -->
+  <!-- HEADER -->
+  <!-- ====================================== -->
+
+  <header class="hero" aria-label="Cabeçalho principal">
+    <nav class="navbar" aria-label="Menu principal">
+
+      <h1 class="logo">💧 Irrigatech </h1>
+
+      <ul class="nav-links">
+         <li><a href="#curiosidades">Curiosidades</a></li>
+        <li><a href="#dicas">Dicas</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#calculadora">Calculadora</a></li>
+      </ul>
+
+    </nav>
+
+    <div class="hero-content reveal">
+      <h2>Combata o desperdício de água no campo</h2>
+
+      <p>
+        Descubra soluções sustentáveis, irrigação inteligente
+        e ferramentas educativas para preservar nossos recursos naturais.
+      </p>
+
+      <div class="hero-buttons">
+        <button id="increase-font">A+</button>
+        <button id="decrease-font">A-</button>
+        <button id="contrast-btn">Alto Contraste</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================================== -->
+  <!-- MAIN -->
+  <!-- ====================================== -->
+
+  <main>
+
+    <!-- ====================================== -->
+    <!-- SEÇÃO CURIOSIDADES -->
+    <!-- ====================================== -->
+
+    <section id="problema" class="section reveal" aria-labelledby="titulo-problema">
+
+      <h2 id="titulo-problema">Curiosidades</h2>
+
+      <div class="grid-2">
+
+        <article class="card">
+          <h3>☕ O preço do cafézinho</h3>
+
+          <p>
+           Para produzir apenas uma única xícara de café, são necessários cerca de 140 litros de água (contando o cultivo, colheita, transporte e processamento dos grãos).</p>
+        </article>
+
+        <article class="card">
+          <h3>🍔 O peso de um hambúrguer</h3>
+
+          <p>
+          Um único hambúrguer de carne bovina (cerca de 150g) consome aproximadamente 2.400 litros de água em toda a sua cadeia de produção.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>🍫 Chocolate "pesado"</h3>
+
+          <p>
+          O chocolate é um dos campeões de consumo: são necessários mais de 17.000 litros de água para produzir apenas 1 kg dele.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>👖 Jeans que "bebem" água</h3>
+
+          <p>
+           Fabricar uma calça jeans comum consome cerca de 8.000 litros de água. Por isso, a moda circular e a reciclagem de roupas são tão importantes para o meio ambiente.</p>
+        </article>
+
+         <article class="card">
+          <h3>💧 O perigo do "pinga-pinga"</h3>
+
+          <p>
+          Uma torneira gotejando um segundo de cada vez pode desperdiçar mais de 46 litros de água por dia. Ao final de um ano, isso representa mais de 16.000 litros jogados fora.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>❄️ Água trancada</h3>
+
+          <p>
+          Menos de 1% de toda a água do planeta Terra é doce e está acessível para o consumo humano. O restante está congelado nas geleiras ou é salgado nos oceanos.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================================== -->
+    <!-- CARROSSEL -->
+    <!-- ====================================== -->
+
+    <section class="section reveal" aria-label="Galeria de sustentabilidade">
+
+      <h2>Infográficos Sustentáveis</h2>
+
+      <div class="carousel">
+
+        <button class="carousel-btn prev" aria-label="Imagem anterior">
+          ❮
+        </button>
+
+        <div class="carousel-track-container">
+          <div class="carousel-track" id="carousel-track">
+            <!-- Renderizado via JS -->
+          </div>
+        </div>
+
+        <button class="carousel-btn next" aria-label="Próxima imagem">
+          ❯
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ====================================== -->
+    <!-- DICAS -->
+    <!-- ====================================== -->
+
+    <section id="dicas" class="section reveal">
+
+      <h2>Dicas Sustentáveis</h2>
+
+      <div id="tips-container" class="tips-grid">
+        <!-- Renderizado via JS -->
+      </div>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- ACORDEÃO -->
+    <!-- ====================================== -->
+
+    <section class="section reveal">
+
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="accordion-container">
+
+        <button class="accordion">
+          O que é irrigação inteligente?
+        </button>
+
+        <div class="panel">
+          <p>
+            É o uso de sensores e automação para utilizar
+            apenas a quantidade necessária de água.
+          </p>
+        </div>
+
+        <button class="accordion">
+          Como reduzir desperdícios?
+        </button>
+
+        <div class="panel">
+          <p>
+            Monitorando o solo, reutilizando água
+            e evitando irrigação em horários quentes.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- QUIZ -->
+    <!-- ====================================== -->
+
+    <section id="quiz" class="section reveal">
+
+      <h2>Quiz Sustentável</h2>
+
+      <div class="quiz-box">
+
+        <p id="question"></p>
+
+        <div id="answers"></div>
+
+        <p id="quiz-result"></p>
+
+      </div>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- CALCULADORA -->
+    <!-- ====================================== -->
+
+    <section id="calculadora" class="section reveal">
+
+      <h2>Calculadora de Consumo</h2>
+
+      <div class="calculator">
+
+        <label for="litros">
+          Quantos litros você utiliza por dia?
+        </label>
+
+        <input
+          type="number"
+          id="litros"
+          placeholder="Digite os litros"
+        />
+
+        <button id="calculate-btn">
+          Calcular
+        </button>
+
+        <p id="resultado-calculo"></p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ====================================== -->
+  <!-- FOOTER -->
+  <!-- ====================================== -->
+
+  <footer class="footer">
+
+    <p>
+      © 2026 EcoÁgua | Sustentabilidade e tecnologia no campo
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
